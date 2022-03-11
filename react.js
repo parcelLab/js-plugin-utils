@@ -1,4 +1,4 @@
-import React from 'react'
+const React = require('react');
 
 function loadScript(src, container = document.head, attributes = null) {
   return new Promise((resolve, reject) => {
@@ -57,7 +57,7 @@ function loadCssFile(cssFileUrl, container = document.head, before = false) {
   }
 }
 
-export default function TrackAndTrace(ref) {
+module.exports = function TrackAndTrace(ref) {
   var options = ref.options;
 
   var tntRef = React.useRef()
