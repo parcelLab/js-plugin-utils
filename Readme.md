@@ -7,7 +7,7 @@ Check out the [documentation on the parcelLab track & trace JS plugin](https://h
 
 ## React
 For usage with react/next/...:
-(React need to be installed...)  
+(React needs to be installed...)  
 
 ```javascript
 import TrackAndTrace from '@parcellab/js-plugin-utils/react'
@@ -27,14 +27,14 @@ export default function MyPageComponent() {
 
 ## Vue
 For usage with vue/nuxt/...:
-(Vue need to be installed...)  
+(Vue needs to be installed...)  
 
 ```html
 <template>
   <TrackAndTrace options="{...}" />
 </template>
 <script>
-  import TrackAndTrace from '@parcellab/js-plugin-utils/vue/index.vue'
+  import TrackAndTrace from '@parcellab/js-plugin-utils/vue'
 
   export default {
     components: {
