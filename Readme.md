@@ -45,3 +45,26 @@ For usage with vue/nuxt/...:
 
 
 ```
+
+# Diabling the default styles
+These components are built to automatically pull the newest version of our prebuilt Style Sheets from our CDN.  
+If you would like to omit these and build your own styles - you can disable the fetching by setting the param "disableDefaultStyles" to true.  
+⚠️  You will need to import your own styles at some point in your application flow.  
+⚠️  Styles that are passed through the options object will still work though!  
+⚠️  You will need to set theses through the options.styles object or override them in your style sheet.  
+
+## Disabling default styles in React:
+```javascript
+import TrackAndTrace from '@parcellab/js-plugin-utils/react'
+
+export default function MyPageComponent() {
+  const options = {...}
+  // ...
+  return(
+    <div>
+      {/* ... */}
+      <TrackAndTrace options={options} disableDefaultStyles={true} />
+    </div>
+  )
+}
+

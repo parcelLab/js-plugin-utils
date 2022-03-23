@@ -58,11 +58,11 @@ function loadCssFile(cssFileUrl, container = document.head, before = false) {
   }
 }
 
-export default function TrackAndTrace({ options }) {
+export default function TrackAndTrace({ options, disableDefaultStyles=false }) {
   const tntRef = useRef()
   useEffect(() => {
     if (typeof document === 'object' && tntRef.current) {
-      loadCssFile('https://cdn.parcellab.com/css/v3/parcelLab.min.css')
+      if (!disableDefaultStyles) loadCssFile('https://cdn.parcellab.com/css/v3/parcelLab.min.css')
       loadScript('https://cdn.parcellab.com/js/v3/parcelLab.min.js').then(function (script) {
         window._prcl = new window.ParcelLab('#parcellab-track-and-trace', options || {})
         window._prcl.initialize()
