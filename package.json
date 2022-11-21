@@ -13,6 +13,8 @@
     "unsafe-build-react:v5": "buble src/v5/react/index.jsx > v5/react/index.js --no moduleExport,moduleImport",
     "unsafe-build-vue": "npx vue-cli-service build --target lib src/v3/vue/index.vue && npm run prepare:vue-v3",
     "unsafe-build-vue:v5": "npx vue-cli-service build --target lib src/v5/vue/index.vue && npm run prepare:vue-v5",
+    "unsafe-build-web": "buble src/v3/web/index.js > v3/web/index.js --no moduleExport,moduleImport",
+    "unsafe-build-web:v5": "buble src/v5/web/index.js > v5/web/index.js --no moduleExport,moduleImport",
     "prepare:vue-v3": "cp dist/js-plugin-utils.common.js v3/vue/index.js",
     "prepare:vue-v5": "cp dist/js-plugin-utils.common.js v5/vue/index.js"
   },
