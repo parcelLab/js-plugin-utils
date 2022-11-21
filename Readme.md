@@ -10,7 +10,7 @@ For usage with react/next/...:
 (React needs to be installed...)  
 
 ```javascript
-import TrackAndTrace from '@parcellab/js-plugin-utils/react'
+import TrackAndTrace from '@parcellab/js-plugin-utils/v3/react'
 
 export default function MyPageComponent() {
   const options = {...}
@@ -34,7 +34,7 @@ For usage with vue/nuxt/...:
   <TrackAndTrace options="{...}" />
 </template>
 <script>
-  import TrackAndTrace from '@parcellab/js-plugin-utils/vue'
+  import TrackAndTrace from '@parcellab/js-plugin-utils/v3/vue'
 
   export default {
     components: {
@@ -46,7 +46,7 @@ For usage with vue/nuxt/...:
 
 ```
 
-# Diabling the default styles
+# Disabling the default styles
 These components are built to automatically pull the newest version of our prebuilt Style Sheets from our CDN.  
 If you would like to omit these and build your own styles - you can disable the fetching by setting the param "disableDefaultStyles" to true.  
 ⚠️  You will need to import your own styles at some point in your application flow.  
@@ -55,7 +55,7 @@ If you would like to omit these and build your own styles - you can disable the 
 
 ## Disabling default styles in React:
 ```javascript
-import TrackAndTrace from '@parcellab/js-plugin-utils/react'
+import TrackAndTrace from '@parcellab/js-plugin-utils/v3/react'
 
 export default function MyPageComponent() {
   const options = {...}
