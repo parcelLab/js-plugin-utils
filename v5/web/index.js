@@ -1,12 +1,10 @@
-var TrackAndTrace = /*@__PURE__*/(function (HTMLElement) {
-  function TrackAndTrace() {
-    var this$1 = this;
-
-    HTMLElement.call(this);
+class TrackAndTrace extends HTMLElement {
+  constructor() {
+    super();
     this._options = window.parcelLabTrackAndTraceOptions || {};
     this._disableDefaultStyles = window.disableDefaultStyles || false;
 
-    var wrapper = document.createElement("div");
+    const wrapper = document.createElement("div");
     wrapper.setAttribute("id", "parcellab-track-and-trace");
     this.appendChild(wrapper);
 
@@ -17,21 +15,14 @@ var TrackAndTrace = /*@__PURE__*/(function (HTMLElement) {
       document.getElementsByTagName("head")[0].appendChild(linkTag);
     }
 
-    var script = document.createElement("script");
+    const script = document.createElement("script");
     script.src = "https://cdn.parcellab.com/js/v5/main.min.js";
     script.async = true;
-    script.onload = function () {
-      window.parcelLabTrackAndTrace.initialize(this$1._options);
+    script.onload = () => {
+      window.parcelLabTrackAndTrace.initialize(this._options);
     };
     document.getElementsByTagName("head")[0].appendChild(script);
   }
-
-  if ( HTMLElement ) TrackAndTrace.__proto__ = HTMLElement;
-  TrackAndTrace.prototype = Object.create( HTMLElement && HTMLElement.prototype );
-  TrackAndTrace.prototype.constructor = TrackAndTrace;
-
-  return TrackAndTrace;
-}(HTMLElement));
+}
 
 customElements.define("track-and-trace", TrackAndTrace);
-
