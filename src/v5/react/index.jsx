@@ -1,7 +1,6 @@
 import "./main.min";
+import "./main.min.css";
 import React, { useEffect } from "react";
-
-const style = React.lazy(() => import("./main.min.css"));
 
 export default function TrackAndTrace({ options, disableDefaultStyles = false }) {
   useEffect(() => {
@@ -9,5 +8,5 @@ export default function TrackAndTrace({ options, disableDefaultStyles = false })
       window.parcelLabTrackAndTrace.initialize(options || {});
     }
   }, [options]);
-  return <div style={disableDefaultStyles ? "" : style} id="parcellab-track-and-trace"></div>;
+  return <div id="parcellab-track-and-trace"></div>;
 }
