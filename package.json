@@ -4,6 +4,9 @@
   "description": "Utils for using the parcelLab js plugin with different frameworks (react/vue)",
   "private": false,
   "main": "index.js",
+  "files": [
+    "lib/"
+  ],
   "scripts": {
     "unsafe-build-react": "buble src/v3/react/index.jsx > lib/v3/react.js --no moduleExport,moduleImport",
     "unsafe-build-vue": "npx vue-cli-service build --target lib src/v3/vue/index.vue && npm run prepare:vue-v3",
