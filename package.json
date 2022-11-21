@@ -5,10 +5,12 @@
   "private": false,
   "main": "index.js",
   "files": [
-    "lib/"
+    "lib/",
+    "assets/"
   ],
   "scripts": {
     "unsafe-build-react": "buble src/v3/react/index.jsx > lib/v3/react.js --no moduleExport,moduleImport",
+    "unsafe-build-react:v5": "buble src/v5/react/index.jsx > lib/v5/react.js --no moduleExport,moduleImport",
     "unsafe-build-vue": "npx vue-cli-service build --target lib src/v3/vue/index.vue && npm run prepare:vue-v3",
     "prepare:vue-v3": "cp dist/js-plugin-utils.common.js lib/v3/vue.js"
   },
