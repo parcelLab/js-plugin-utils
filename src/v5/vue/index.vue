@@ -1,5 +1,8 @@
-import React, { useEffect, useRef } from "react";
+<template>
+  <div id="parcellab-track-and-trace"></div>
+</template>
 
+<script>
 function loadScript(src, container = document.head, attributes = null) {
   return new Promise((resolve, reject) => {
     const scriptEl = document.createElement("script");
@@ -56,14 +59,16 @@ function loadCssFile(cssFileUrl, container = document.head, before = false) {
   }
 }
 
-export default function TrackAndTrace({ options, disableDefaultStyles = false }) {
-  const tntRef = useRef();
-  useEffect(() => {
-    if (typeof document === "object" && tntRef.current) {
-      if (!disableDefaultStyles) loadCssFile("https://cdn.parcellab.com/css/v3/parcelLab.min.css");
-      loadScript("https://cdn.parcellab.com/js/v3/parcelLab.min.js").then(
+export default {
+  name: "ParcelLab",
+  props: ["options", "disableDefaultStyles"],
+  async created() {
+    const _v = this;
+    if (typeof document === "object" && window) {
+      if (!_v.disableDefaultStyles) loadCssFile("https://cdn.parcellab.com/css/v5/parcelLab.min.css");
+      loadScript("https://cdn.parcellab.com/js/v5/parcelLab.min.js").then(
         function (script) {
-          window._prcl = new window.ParcelLab("#parcellab-track-and-trace", options || {});
+          window._prcl = new window.ParcelLab("#parcellab-track-and-trace", _v.options || {});
           window._prcl.initialize();
         },
         function (err) {
@@ -72,6 +77,6 @@ export default function TrackAndTrace({ options, disableDefaultStyles = false })
         }
       );
     }
-  }, [tntRef]);
-  return <div id="parcellab-track-and-trace" ref={tntRef}></div>;
-}
+  },
+};
+</script>
