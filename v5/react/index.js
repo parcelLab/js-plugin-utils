@@ -69,8 +69,8 @@ export default function TrackAndTrace(ref) {
   var tntRef = useRef();
   useEffect(function () {
     if (typeof document === "object" && tntRef.current) {
-      if (!disableDefaultStyles) { loadCssFile("https://cdn.parcellab.com/css/v5/parcelLab.min.css"); }
-      loadScript("https://cdn.parcellab.com/js/v5/parcelLab.min.js").then(
+      if (!disableDefaultStyles) { loadCssFile("https://cdn.parcellab.com/css/v5/main.min.css"); }
+      loadScript("https://cdn.parcellab.com/js/v5/main.min.js").then(
         function (script) {
           window._prcl = new window.ParcelLab("#parcellab-track-and-trace", options || {});
           window._prcl.initialize();

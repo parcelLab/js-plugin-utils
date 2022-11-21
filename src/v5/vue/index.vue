@@ -65,8 +65,8 @@ export default {
   async created() {
     const _v = this;
     if (typeof document === "object" && window) {
-      if (!_v.disableDefaultStyles) loadCssFile("https://cdn.parcellab.com/css/v5/parcelLab.min.css");
-      loadScript("https://cdn.parcellab.com/js/v5/parcelLab.min.js").then(
+      if (!_v.disableDefaultStyles) loadCssFile("https://cdn.parcellab.com/css/v5/main.min.css");
+      loadScript("https://cdn.parcellab.com/js/v5/main.min.js").then(
         function (script) {
           window._prcl = new window.ParcelLab("#parcellab-track-and-trace", _v.options || {});
           window._prcl.initialize();

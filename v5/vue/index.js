@@ -51,7 +51,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ const setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/v5/vue/index.vue?vue&type=template&id=0e968b55&
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/v5/vue/index.vue?vue&type=template&id=01eb989f&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"parcellab-track-and-trace"}})}
 var staticRenderFns = []
 
@@ -124,8 +124,8 @@ function loadCssFile(cssFileUrl, container = document.head, before = false) {
   async created() {
     const _v = this;
     if (typeof document === "object" && window) {
-      if (!_v.disableDefaultStyles) loadCssFile("https://cdn.parcellab.com/css/v5/parcelLab.min.css");
-      loadScript("https://cdn.parcellab.com/js/v5/parcelLab.min.js").then(
+      if (!_v.disableDefaultStyles) loadCssFile("https://cdn.parcellab.com/css/v5/main.min.css");
+      loadScript("https://cdn.parcellab.com/js/v5/main.min.js").then(
         function (script) {
           window._prcl = new window.ParcelLab("#parcellab-track-and-trace", _v.options || {});
           window._prcl.initialize();
