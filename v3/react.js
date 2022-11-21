@@ -86,4 +86,3 @@ module.exports = function TrackAndTrace(ref) {
     React.createElement( 'div', { id: 'parcellab-track-and-trace', ref: tntRef })
   )
 }
-

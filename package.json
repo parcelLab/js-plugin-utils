@@ -3,22 +3,22 @@
   "version": "1.0.0",
   "description": "Utils for using the parcelLab js plugin with different frameworks (react/vue)",
   "private": false,
-  "main": "index.js",
   "files": [
-    "lib/",
-    "assets/"
+    "assets/",
+    "v3/",
+    "v5/"
   ],
   "scripts": {
-    "unsafe-build-react": "buble src/v3/react/index.jsx > lib/v3/react.js --no moduleExport,moduleImport",
-    "unsafe-build-react:v5": "buble src/v5/react/index.jsx > lib/v5/react.js --no moduleExport,moduleImport",
+    "unsafe-build-react": "buble src/v3/react/index.jsx > v3/react/index.js --no moduleExport,moduleImport",
+    "unsafe-build-react:v5": "buble src/v5/react/index.jsx > v5/react/index.js --no moduleExport,moduleImport",
     "unsafe-build-vue": "npx vue-cli-service build --target lib src/v3/vue/index.vue && npm run prepare:vue-v3",
-    "prepare:vue-v3": "cp dist/js-plugin-utils.common.js lib/v3/vue.js"
+    "prepare:vue-v3": "cp dist/js-plugin-utils.common.js v3/vue/index.js"
   },
   "author": "@andruschka",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^16.0.2",
-    "react-dom": "^16.0.2"
+    "react": "^16.0.2 || ^18",
+    "react-dom": "^16.0.2 || ^18"
   },
   "devDependencies": {
     "@vue/cli-service": "^5.0.1",

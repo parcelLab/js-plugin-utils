@@ -1,7 +1,7 @@
-import "../../../assets/v5/main.min";
+import "./main.min";
 import React, { useEffect } from "react";
 
-const style = React.lazy(() => import("../../../assets/v5/main.min.css"));
+const style = React.lazy(() => import("./main.min.css"));
 
 export default function TrackAndTrace({ options, disableDefaultStyles = false }) {
   useEffect(() => {
