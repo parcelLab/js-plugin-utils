@@ -29,6 +29,9 @@ function loadScript(src, container = document.head, attributes = null) {
       if (err) {
         reject(err);
       }
+      if (!window.parcelLabTrackAndTrace) {
+        reject(new Error("window.parcelLabTrackAndTrace is undefined"));
+      }
       resolve(null);
     }
     function onLoadError(e) {
@@ -68,12 +71,11 @@ export default {
       if (!_v.disableDefaultStyles) loadCssFile("https://cdn.parcellab.com/css/v5/main.min.css");
       loadScript("https://cdn.parcellab.com/js/v5/main.min.js").then(
         function (script) {
-          window._prcl = new window.ParcelLab("#parcellab-track-and-trace", _v.options || {});
-          window._prcl.initialize();
+          window.parcelLabTrackAndTrace.initialize(options || {});
         },
         function (err) {
-          console.log("Could not load parcelLab script dynamically...");
-          console.log(err);
+          console.error("Could not load parcelLab script dynamically...");
+          console.error(err);
         }
       );
     }
