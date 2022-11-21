@@ -82,7 +82,7 @@ Or in a HTML document:
   <body>
     <main>
       <h1>Welcome to My Website</h1>
-      <track-and-trace options="text" />
+      <track-and-trace />
     </main>
     <script>
       window.parcelLabTrackAndTraceOptions = {...};
