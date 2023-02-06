@@ -4,10 +4,10 @@
   "description": "Utils for using the parcelLab js plugin with different frameworks (react/vue)",
   "private": false,
   "files": [
-    "assets/",
     "v3/",
     "v5/"
   ],
+  "types": "types/index.d.ts",
   "scripts": {
     "unsafe-build-react": "buble src/v3/react/index.jsx > v3/react/index.js --no moduleExport,moduleImport",
     "unsafe-build-react:v5": "buble src/v5/react/index.jsx > v5/react/index.js --no moduleExport,moduleImport",
