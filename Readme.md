@@ -55,7 +55,7 @@ For usage with vue/nuxt/...:
 ## Web Component
 For usage directly as web component in any JSX file:
 
-options and disableDefaultStyles should be previously defined and attached to the window opbject.
+options and disableDefaultStyles should be previously defined and attached to the window object.
 
 ```javascript
   window.parcelLabTrackAndTraceOptions = {}
@@ -85,7 +85,8 @@ Or in a HTML document:
       <track-and-trace />
     </main>
     <script>
-      window.parcelLabTrackAndTraceOptions = {...};
+      window.parcelLabTrackAndTraceOptions = {}
+      window.disableDefaultStyles = true|false;
     </script>
     <script src="../node_modules/@parcellab/js-plugin-utils/v5/web/index.js"></script>
   </body>
