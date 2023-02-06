@@ -3,7 +3,7 @@
 </template>
 
 <script>
-function loadScript(src) {
+function loadScript(src, container = document.head) {
   return new Promise((resolve, reject) => {
     const scriptEl = document.createElement('script')
     scriptEl.src = src
@@ -42,16 +42,12 @@ function loadScript(src) {
   })
 }
 
-function loadCssFile(cssFileUrl, container = document.head, before = false) {
+function loadCssFile(cssFileUrl, container = document.head) {
   const styleSheet = document.createElement('link')
   styleSheet.rel = 'stylesheet'
   styleSheet.type = 'text/css'
   styleSheet.href = cssFileUrl
-  if (before) {
-    container.insertBefore(styleSheet, container.firstChild)
-  } else {
-    container.appendChild(styleSheet)
-  }
+  container.insertBefore(styleSheet, container.firstChild)
 }
 
 export default {
@@ -74,4 +70,4 @@ export default {
     }
   },
 }
-</script>
+</script>>
