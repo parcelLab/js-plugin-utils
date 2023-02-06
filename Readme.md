@@ -83,9 +83,6 @@ For customisation, `options` can be defined and attached to the window object. T
 </body>
 ```
 
-If preferred, you can target the older plugin's version:
-> import TrackAndTrace from '@parcellab/js-plugin-utils/v3/web'
-
 # Disabling the default styles
 These components are built to automatically pull the newest version of our prebuilt Style Sheets from our CDN.  
 If you would like to omit these and build your own styles - you can disable the fetching by setting the param "disableDefaultStyles" to true.  
