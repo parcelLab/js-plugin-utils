@@ -12,9 +12,6 @@ For usage with react/next/...:
 ```javascript
 import TrackAndTrace from '@parcellab/js-plugin-utils/v5/react'
 
-// V3 is still available if needed
-// import TrackAndTrace from '@parcellab/js-plugin-utils/v3/react'
-
 export default function MyPageComponent() {
   const options = {...}
   // ...
@@ -27,6 +24,9 @@ export default function MyPageComponent() {
 }
 
 ```
+The plugin's version 3 is still available if needed
+> import TrackAndTrace from '@parcellab/js-plugin-utils/v3/react'
+
 
 ## Vue
 For usage with vue/nuxt/...:
@@ -39,9 +39,6 @@ For usage with vue/nuxt/...:
 <script>
   import TrackAndTrace from '@parcellab/js-plugin-utils/v5/vue'
 
-  // V3 is still available if needed
-  // import TrackAndTrace from '@parcellab/js-plugin-utils/v3/vue'
-
   export default {
     components: {
       TrackAndTrace
@@ -49,8 +46,10 @@ For usage with vue/nuxt/...:
   }
 </script>
 
-
 ```
+
+The plugin's version 3 is still available if needed
+> import TrackAndTrace from '@parcellab/js-plugin-utils/v3/vue'
 
 ## Web Component
 For usage directly as web component in any JSX file:
