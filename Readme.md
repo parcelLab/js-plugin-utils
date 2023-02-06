@@ -52,43 +52,36 @@ The plugin's version 3 is still available if needed
 > import TrackAndTrace from '@parcellab/js-plugin-utils/v3/vue'
 
 ## Web Component
-For usage directly as web component in any JSX file:
+For usage directly within your web application or web page:
 
-If needed, `options` and `disableDefaultStyles` should be previously defined and attached to the window object.
-
-```javascript
-  window.parcelLabTrackAndTraceOptions = {}
-  window.disableDefaultStyles = true|false;
-```
+On your application's main js file, you can directly import the web component dependency:
 
 ```javascript
-  import TrackAndTrace from '@parcellab/js-plugin-utils/v5/web'
-
-  export default function MyPageComponent() {
-  // ...
-  return(
-    <div>
-      {/* ... */}
-      <track-and-trace />
-    </div>
-  )
-}
-
+import "@parcellab/js-plugin-utils/v5/web/index.js";
 ```
 
-Or in a HTML document:
+And later run it from the HTML file where the bundled js will be included, like:
 ```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="main.min.js"></script>
+  </head>
   <body>
-    <main>
-      <h1>Welcome to My Website</h1>
-      <track-and-trace />
-    </main>
-    <script>
-      window.parcelLabTrackAndTraceOptions = {}
-      window.disableDefaultStyles = true|false;
-    </script>
-    <script src="../node_modules/@parcellab/js-plugin-utils/v5/web/index.js"></script>
+    <track-and-trace />
   </body>
+</html>
+```
+
+For customisation, `options` can be defined and attached to the window object. This should happen before the component is initialised. Ex:
+
+```html
+<body>
+  <script>
+    window.parcelLabTrackAndTraceOptions = {} // options object goes here
+  </script>
+  <track-and-trace />
+</body>
 ```
 
 # Disabling the default styles
