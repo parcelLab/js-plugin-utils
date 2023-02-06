@@ -24,7 +24,7 @@ export default function MyPageComponent() {
 }
 
 ```
-The plugin's version 3 is still available if needed
+If preferred, you can target the older plugin's version:
 > import TrackAndTrace from '@parcellab/js-plugin-utils/v3/react'
 
 
@@ -47,8 +47,7 @@ For usage with vue/nuxt/...:
 </script>
 
 ```
-
-The plugin's version 3 is still available if needed
+If preferred, you can target the older plugin's version:
 > import TrackAndTrace from '@parcellab/js-plugin-utils/v3/vue'
 
 ## Web Component
@@ -83,6 +82,9 @@ For customisation, `options` can be defined and attached to the window object. T
   <track-and-trace />
 </body>
 ```
+
+If preferred, you can target the older plugin's version:
+> import TrackAndTrace from '@parcellab/js-plugin-utils/v3/web'
 
 # Disabling the default styles
 These components are built to automatically pull the newest version of our prebuilt Style Sheets from our CDN.  
