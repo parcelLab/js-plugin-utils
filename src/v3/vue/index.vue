@@ -3,15 +3,10 @@
 </template>
 
 <script>
-function loadScript(src, container = document.head, attributes = null) {
+function loadScript(src) {
   return new Promise((resolve, reject) => {
     const scriptEl = document.createElement('script')
     scriptEl.src = src
-    if (attributes) {
-      Object.keys(attributes).forEach((key) => {
-        scriptEl.setAttribute(key, attributes[key])
-      })
-    }
     let timeout = 0
     let err
     function onScriptError(e) {
