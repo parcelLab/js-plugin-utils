@@ -72,6 +72,6 @@ export default function TrackAndTrace({ options, disableDefaultStyles = false })
         }
       );
     }
-  }, [tntRef]);
+  }, [tntRef.current]);
   return <div id="parcellab-track-and-trace" ref={tntRef}></div>;
 }

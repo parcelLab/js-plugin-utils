@@ -83,7 +83,7 @@ export default function TrackAndTrace(ref) {
         }
       );
     }
-  }, [tntRef]);
+  }, [tntRef.current]);
   return React.createElement( 'div', { id: "parcellab-track-and-trace", ref: tntRef });
 }
 
