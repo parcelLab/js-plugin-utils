@@ -54,7 +54,7 @@ The plugin's version 3 is still available if needed
 ## Web Component
 For usage directly as web component in any JSX file:
 
-options and disableDefaultStyles should be previously defined and attached to the window object.
+If needed, `options` and `disableDefaultStyles` should be previously defined and attached to the window object.
 
 ```javascript
   window.parcelLabTrackAndTraceOptions = {}
