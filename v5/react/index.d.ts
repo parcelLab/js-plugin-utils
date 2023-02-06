@@ -6,7 +6,7 @@ declare module "@parcellab/js-plugin-utils/v5/react" {
     disableDefaultStyles?: boolean;
   }
 
-  const TrackAndTrace: React.Component<Props>;
+  const TrackAndTrace: React.FC<Props>;
 
   export default TrackAndTrace;
 }
