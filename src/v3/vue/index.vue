@@ -67,7 +67,7 @@ export default {
     if (typeof document === 'object' && window) {
       if (!_v.disableDefaultStyles) loadCssFile('https://cdn.parcellab.com/css/v3/parcelLab.min.css')
       loadScript('https://cdn.parcellab.com/js/v3/parcelLab.min.js').then(
-        function (script) {
+        function () {
           window._prcl = new window.ParcelLab('#parcellab-track-and-trace', _v.options || {})
           window._prcl.initialize()
         },

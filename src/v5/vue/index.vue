@@ -70,8 +70,8 @@ export default {
     if (typeof document === "object" && window) {
       if (!_v.disableDefaultStyles) loadCssFile("https://cdn.parcellab.com/css/v5/main.min.css");
       loadScript("https://cdn.parcellab.com/js/v5/main.min.js").then(
-        function (script) {
-          window.parcelLabTrackAndTrace.initialize(options || {});
+        function () {
+          window.parcelLabTrackAndTrace.initialize(_v.options || {});
         },
         function (err) {
           console.error("Could not load parcelLab script dynamically...");
