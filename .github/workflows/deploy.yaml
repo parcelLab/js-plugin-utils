@@ -1,0 +1,54 @@
+name: Deploy main
+
+on:
+  push:
+    branches: ["main", "move-to-v5-and-v3"]
+
+env:
+  NODE_VERSION: 18
+
+jobs:
+  deploy:
+    # environment: ${{ github.event.deployment.payload.env }}
+    # concurrency: ${{ github.event.deployment.payload.env }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+      id-token: write
+    steps:
+      - name: Checkout current git repository
+        uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: AWS - authentication
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: "eu-central-1"
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+
+      - name: Upload static files to AWS S3 (Staging)
+        run: |
+          aws s3 cp ./v5/web/index.js s3://parcellab-cdn/playground/web-component/order-status.js \ 
+            --cache-control max-age=86400
+
+      - name: Clear the CDN cache (Staging)
+        if: ${{ github.event.deployment.payload.env == 'staging' }}
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id E3R5S2BJQI4RDS \
+            --paths "/playground/web-component/*"
+
+      # - name: Upload static files to AWS S3 (Production)
+      #   run: aws s3 cp ./v5/web/index.js s3://parcellab-cdn/js/v5/web-component/oder-status.js --cache-control max-age=86400
+
+      # - name: Clear the CDN cache (Production)
+      #   if: ${{ github.event.deployment.payload.env == 'prod' }}
+      #   run: |
+      #     aws cloudfront create-invalidation \
+      #       --distribution-id E3R5S2BJQI4RDS \
+      #       --paths "/js/v5/web-component/oder-status.js"
