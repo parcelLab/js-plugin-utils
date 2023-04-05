@@ -30,11 +30,10 @@ jobs:
             --cache-control max-age=86400
 
       - name: Clear the CDN cache (Staging)
-        if: ${{ github.event.deployment.payload.env == 'staging' }}
         run: |
           aws cloudfront create-invalidation \
             --distribution-id E3R5S2BJQI4RDS \
-            --paths "/playground/web-component/*"
+            --paths "/playground/web-components/*"
 
       - name: Upload static files to AWS S3 (Production)
         run: |
@@ -42,8 +41,7 @@ jobs:
             --cache-control max-age=86400
 
       - name: Clear the CDN cache (Production)
-        if: ${{ github.event.deployment.payload.env == 'prod' }}
         run: |
           aws cloudfront create-invalidation \
             --distribution-id E3R5S2BJQI4RDS \
-            --paths "/js/v5/web-component/oder-status.js"
+            --paths "/js/v5/web-components/*"
