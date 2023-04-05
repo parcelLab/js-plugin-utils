@@ -3,10 +3,12 @@ class TrackAndTrace extends HTMLElement {
     super();
     this._options = window.parcelLabTrackAndTraceOptions || {};
     this._disableDefaultStyles = window.disableDefaultStyles || false;
+    this._wrapper = document.createElement("div");
+    this._wrapper.setAttribute("id", "parcellab-track-and-trace");
+  }
 
-    const wrapper = document.createElement("div");
-    wrapper.setAttribute("id", "parcellab-track-and-trace");
-    this.appendChild(wrapper);
+  appendToDom() {
+    this.appendChild(this._wrapper);
 
     if (!this._disableDefaultStyles) {
       var linkTag = document.createElement("link");
@@ -22,6 +24,10 @@ class TrackAndTrace extends HTMLElement {
       window.parcelLabTrackAndTrace.initialize(this._options);
     };
     document.getElementsByTagName("head")[0].appendChild(script);
+  }
+
+  connectedCallback() {
+    this.appendToDom();
   }
 }
 
