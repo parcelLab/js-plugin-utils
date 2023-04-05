@@ -53,18 +53,18 @@ If preferred, you can target the older plugin's version:
 ## Web Component
 For usage directly within your web application or web page:
 
-On your application's main js file, you can directly import the web component dependency:
+On your application's main js file, you can directly import the web component dependency.
 
 ```javascript
-import "@parcellab/js-plugin-utils/v5/web/index.js";
+import "@parcellab/js-plugin-utils/v5/web";
 ```
 
-And later run it from the HTML file where the bundled js will be included, like:
+And later run it from the HTML file where the bundled js will be included
 ```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="main.min.js"></script>
+    ...
   </head>
   <body>
     <track-and-trace />
