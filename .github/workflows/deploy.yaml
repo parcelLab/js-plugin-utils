@@ -43,7 +43,7 @@ jobs:
 
       - name: Upload static files to AWS S3 (Production)
         run: |
-          aws s3 cp ./v5/web/index.js s3://parcellab-cdn/js/v5/web-components/oder-status.js \ 
+          aws s3 cp ./v5/web/index.js s3://parcellab-cdn/js/v5/web-components/oder-status.js \
             --cache-control max-age=86400
 
       - name: Clear the CDN cache (Production)
