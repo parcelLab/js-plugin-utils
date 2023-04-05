@@ -9,8 +9,6 @@ env:
 
 jobs:
   deploy:
-    # environment: ${{ github.event.deployment.payload.env }}
-    # concurrency: ${{ github.event.deployment.payload.env }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -43,12 +41,12 @@ jobs:
             --distribution-id E3R5S2BJQI4RDS \
             --paths "/playground/web-component/*"
 
-      # - name: Upload static files to AWS S3 (Production)
-      #   run: aws s3 cp ./v5/web/index.js s3://parcellab-cdn/js/v5/web-component/oder-status.js --cache-control max-age=86400
+      - name: Upload static files to AWS S3 (Production)
+        run: aws s3 cp ./v5/web/index.js s3://parcellab-cdn/js/v5/web-component/oder-status.js --cache-control max-age=86400
 
-      # - name: Clear the CDN cache (Production)
-      #   if: ${{ github.event.deployment.payload.env == 'prod' }}
-      #   run: |
-      #     aws cloudfront create-invalidation \
-      #       --distribution-id E3R5S2BJQI4RDS \
-      #       --paths "/js/v5/web-component/oder-status.js"
+      - name: Clear the CDN cache (Production)
+        if: ${{ github.event.deployment.payload.env == 'prod' }}
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id E3R5S2BJQI4RDS \
+            --paths "/js/v5/web-component/oder-status.js"

@@ -64,10 +64,23 @@ And later run it from the HTML file where the bundled js will be included
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    ...
+    <script src="your-app-bundle.min.js"></script>
   </head>
   <body>
-    <track-and-trace />
+    <track-and-trace></track-and-trace>
+  </body>
+</html>
+```
+
+Otherwise, you can simply import directly from our CDN
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.parcellab.com/js/v5/web-component/oder-status.js"></script>
+  </head>
+  <body>
+    <track-and-trace></track-and-trace>
   </body>
 </html>
 ```
