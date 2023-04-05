@@ -2,7 +2,7 @@ name: Deploy main
 
 on:
   push:
-    branches: ["main", "move-to-v5-and-v3"]
+    branches: ["main"]
 
 env:
   NODE_VERSION: 18
