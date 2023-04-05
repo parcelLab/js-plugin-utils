@@ -31,7 +31,7 @@ jobs:
 
       - name: Upload static files to AWS S3 (Staging)
         run: |
-          aws s3 cp ./v5/web/index.js s3://parcellab-cdn/playground/web-component/order-status.js \ 
+          aws s3 cp ./v5/web/index.js s3://parcellab-cdn/playground/web-components/order-status.js \ 
             --cache-control max-age=86400
 
       - name: Clear the CDN cache (Staging)
@@ -42,7 +42,9 @@ jobs:
             --paths "/playground/web-component/*"
 
       - name: Upload static files to AWS S3 (Production)
-        run: aws s3 cp ./v5/web/index.js s3://parcellab-cdn/js/v5/web-component/oder-status.js --cache-control max-age=86400
+        run: |
+          aws s3 cp ./v5/web/index.js s3://parcellab-cdn/js/v5/web-components/oder-status.js \ 
+            --cache-control max-age=86400
 
       - name: Clear the CDN cache (Production)
         if: ${{ github.event.deployment.payload.env == 'prod' }}
