@@ -77,7 +77,7 @@ Otherwise, you can simply import directly from our CDN
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://cdn.parcellab.com/js/v5/web-components/oder-status.js"></script>
+    <script async src="https://cdn.parcellab.com/js/v5/web-components/oder-status.js"></script>
   </head>
   <body>
     <track-and-trace></track-and-trace>

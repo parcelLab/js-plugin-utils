@@ -42,9 +42,11 @@ declare module "@parcellab/js-plugin-utils/v5/react" {
       xid: string;
       zip: string;
       locale: string;
-      onRendered: (props: object) => void;
+      /* See more about expected received args at https://how.parcellab.works/docs/order-status-page/configuration#onrendered-hook */
+      onRendered: (args: object) => void;
       containerId: string;
       customTranslations: {
+        /* Learn more about the expected syntax at https://how.parcellab.works/docs/order-status-page/configuration#onrendered-hook */
         [language: string]: { [key: string]: unknown };
       };
     }>;

@@ -1,5 +1,5 @@
-declare module "@parcellab/js-plugin-utils/v5/vue" {
-  import { defineComponent } from "vue";
+declare module "@parcellab/js-plugin-utils/v5/react" {
+  import type React from "react";
 
   interface Props {
     options?: Partial<{
@@ -42,14 +42,18 @@ declare module "@parcellab/js-plugin-utils/v5/vue" {
       xid: string;
       zip: string;
       locale: string;
-      onRendered: (props: object) => void;
+      /* See more about expected received args at https://how.parcellab.works/docs/order-status-page/configuration#onrendered-hook */
+      onRendered: (args: object) => void;
       containerId: string;
       customTranslations: {
+        /* Learn more about the expected syntax at https://how.parcellab.works/docs/order-status-page/configuration#onrendered-hook */
         [language: string]: { [key: string]: unknown };
       };
     }>;
     disableDefaultStyles?: boolean;
   }
 
-  export default function (props: Props): ReturnType<typeof defineComponent>;
+  const TrackAndTrace: React.FC<Props>;
+
+  export default TrackAndTrace;
 }
