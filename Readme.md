@@ -24,7 +24,7 @@ export default function MyPageComponent() {
 }
 
 ```
-If preferred, you can use the older plugin's version:
+If needed, you can still reference the older plugin's version:
 > import TrackAndTrace from '@parcellab/js-plugin-utils/v3/react'
 
 
@@ -34,7 +34,7 @@ For usage with vue/nuxt/... :
 
 ```html
 <template>
-  <TrackAndTrace options="{...}" />
+  <TrackAndTrace :options="{...}" />
 </template>
 <script>
   import TrackAndTrace from '@parcellab/js-plugin-utils/v5/vue'
@@ -47,7 +47,7 @@ For usage with vue/nuxt/... :
 </script>
 
 ```
-If preferred, you can target the older plugin's version:
+If needed, you can still reference the older plugin's version:
 > import TrackAndTrace from '@parcellab/js-plugin-utils/v3/vue'
 
 ## Web Component
