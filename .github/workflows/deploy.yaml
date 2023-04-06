@@ -24,23 +24,12 @@ jobs:
           aws-region: "eu-central-1"
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
 
-      - name: Upload static files to AWS S3 (Staging)
-        run: |
-          aws s3 cp ./v5/web/index.js s3://parcellab-cdn/playground/web-components/order-status.js \
-            --cache-control max-age=86400
-
-      - name: Clear the CDN cache (Staging)
-        run: |
-          aws cloudfront create-invalidation \
-            --distribution-id E3R5S2BJQI4RDS \
-            --paths "/playground/web-components/*"
-
-      - name: Upload static files to AWS S3 (Production)
+      - name: Upload static files to AWS S3
         run: |
           aws s3 cp ./v5/web/index.js s3://parcellab-cdn/js/v5/web-components/oder-status.js \
             --cache-control max-age=86400
 
-      - name: Clear the CDN cache (Production)
+      - name: Clear the CDN cache
         run: |
           aws cloudfront create-invalidation \
             --distribution-id E3R5S2BJQI4RDS \
