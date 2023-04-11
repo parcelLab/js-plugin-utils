@@ -1,17 +1,11 @@
 import React, { useEffect, useRef } from "react";
 
-function loadScript(src, container, attributes) {
+function loadScript(src, container) {
   if ( container === void 0 ) container = document.head;
-  if ( attributes === void 0 ) attributes = null;
 
   return new Promise(function (resolve, reject) {
     var scriptEl = document.createElement("script");
     scriptEl.src = src;
-    if (attributes) {
-      Object.keys(attributes).forEach(function (key) {
-        scriptEl.setAttribute(key, attributes[key]);
-      });
-    }
     var timeout = 0;
     var err;
     function onScriptError(e) {
@@ -47,19 +41,15 @@ function loadScript(src, container, attributes) {
   });
 }
 
-function loadCssFile(cssFileUrl, container, before) {
+function loadCssFile(cssFileUrl, container) {
   if ( container === void 0 ) container = document.head;
-  if ( before === void 0 ) before = false;
 
   var styleSheet = document.createElement("link");
   styleSheet.rel = "stylesheet";
   styleSheet.type = "text/css";
   styleSheet.href = cssFileUrl;
-  if (before) {
-    container.insertBefore(styleSheet, container.firstChild);
-  } else {
-    container.appendChild(styleSheet);
-  }
+
+  container.appendChild(styleSheet);
 }
 
 export default function TrackAndTrace(ref) {

@@ -1,14 +1,9 @@
 import React, { useEffect, useRef } from "react";
 
-function loadScript(src, container = document.head, attributes = null) {
+function loadScript(src, container = document.head) {
   return new Promise((resolve, reject) => {
     const scriptEl = document.createElement("script");
     scriptEl.src = src;
-    if (attributes) {
-      Object.keys(attributes).forEach((key) => {
-        scriptEl.setAttribute(key, attributes[key]);
-      });
-    }
     let timeout = 0;
     let err;
     function onScriptError(e) {
@@ -47,16 +42,13 @@ function loadScript(src, container = document.head, attributes = null) {
   });
 }
 
-function loadCssFile(cssFileUrl, container = document.head, before = false) {
+function loadCssFile(cssFileUrl, container = document.head) {
   const styleSheet = document.createElement("link");
   styleSheet.rel = "stylesheet";
   styleSheet.type = "text/css";
   styleSheet.href = cssFileUrl;
-  if (before) {
-    container.insertBefore(styleSheet, container.firstChild);
-  } else {
-    container.appendChild(styleSheet);
-  }
+
+  container.appendChild(styleSheet);
 }
 
 export default function TrackAndTrace({ options, disableDefaultStyles = false }) {
