@@ -1,5 +1,5 @@
 declare module "@parcellab/js-plugin-utils/v5/react" {
-  import type React from "react";
+  import { defineComponent } from "vue";
 
   interface Props {
     options?: Partial<{
@@ -53,7 +53,5 @@ declare module "@parcellab/js-plugin-utils/v5/react" {
     disableDefaultStyles?: boolean;
   }
 
-  const TrackAndTrace: React.FC<Props>;
-
-  export default TrackAndTrace;
+  export default function (props: Props): ReturnType<typeof defineComponent>;
 }
