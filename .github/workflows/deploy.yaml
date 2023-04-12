@@ -1,0 +1,36 @@
+name: Deploy main
+
+on:
+  push:
+    branches: ["main"]
+
+env:
+  NODE_VERSION: 18
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+      id-token: write
+    steps:
+      - name: Checkout current git repository
+        uses: actions/checkout@v3
+
+      - name: AWS - authentication
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: "eu-central-1"
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+
+      - name: Upload static files to AWS S3
+        run: |
+          aws s3 cp ./v5/web/index.js s3://parcellab-cdn/js/v5/web-components/oder-status.js \
+            --cache-control max-age=86400
+
+      - name: Clear the CDN cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id E3R5S2BJQI4RDS \
+            --paths "/js/v5/web-components/*"
