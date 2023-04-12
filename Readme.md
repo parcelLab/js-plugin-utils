@@ -127,7 +127,7 @@ window.disableDefaultStyles = true;
 
 # Breaking Changes
 
-With the release of major the version 1.0.0, the import paths have changed. It is now required that the plugin's version is specified within the path. Ex:
+With the release of the major version 1.0.0, the import paths have changed. It is now required that the plugin's version is specified within the path. Ex:
 | Before                                                       | Now                                                             |
 |--------------------------------------------------------------|-----------------------------------------------------------------|
 | import TrackAndTrace from '@parcellab/js-plugin-utils/react' | import TrackAndTrace from '@parcellab/js-plugin-utils/v5/react' | 
