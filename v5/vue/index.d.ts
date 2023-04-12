@@ -1,4 +1,4 @@
-declare module "@parcellab/js-plugin-utils/v5/react" {
+declare module "@parcellab/js-plugin-utils/v5/vue" {
   import { defineComponent } from "vue";
 
   interface Props {
