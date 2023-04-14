@@ -5,6 +5,10 @@ Check out the [documentation on the parcelLab track & trace JS plugin](https://h
 
 # Usage
 
+First install the @parcellab/js-plugin-utils package:
+
+`npm i @parcellab/js-plugin-utils`
+
 ## React
 For usage with react/next/... :
 (React needs to be installed...)  

@@ -1,7 +1,7 @@
 declare module "@parcellab/js-plugin-utils/v5/vue" {
   import { defineComponent } from "vue";
 
-  interface Props {
+  export interface PluginOptionsType {
     options?: Partial<{
       banner_image: string;
       banner_link: string;
@@ -53,5 +53,5 @@ declare module "@parcellab/js-plugin-utils/v5/vue" {
     disableDefaultStyles?: boolean;
   }
 
-  export default function (props: Props): ReturnType<typeof defineComponent>;
+  export default function (props: PluginOptionsType): ReturnType<typeof defineComponent>;
 }

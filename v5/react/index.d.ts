@@ -1,7 +1,7 @@
 declare module "@parcellab/js-plugin-utils/v5/react" {
   import type React from "react";
 
-  interface Props {
+  export interface PluginOptionsType {
     options?: Partial<{
       banner_image: string;
       banner_link: string;
@@ -53,7 +53,7 @@ declare module "@parcellab/js-plugin-utils/v5/react" {
     disableDefaultStyles?: boolean;
   }
 
-  const TrackAndTrace: React.FC<Props>;
+  const TrackAndTrace: React.FC<PluginOptionsType>;
 
   export default TrackAndTrace;
 }
