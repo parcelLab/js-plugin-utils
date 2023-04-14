@@ -1,6 +1,6 @@
 {
   "name": "@parcellab/js-plugin-utils",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Utils for using the parcelLab js plugin with different frameworks (react/vue)",
   "private": false,
   "files": [
