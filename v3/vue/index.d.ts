@@ -1,10 +1,10 @@
 declare module "@parcellab/js-plugin-utils/v3/vue" {
   import { defineComponent } from "vue";
 
-  interface Props {
+  export interface PluginOptionsType {
     options?: object;
     disableDefaultStyles?: boolean;
   }
 
-  export default function (props: Props): ReturnType<typeof defineComponent>;
+  export default function (props: PluginOptionsType): ReturnType<typeof defineComponent>;
 }
