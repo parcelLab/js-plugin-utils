@@ -1,12 +1,12 @@
 declare module "@parcellab/js-plugin-utils/v3/react" {
   import type React from "react";
 
-  export interface PluginOptionsType {
+  interface PropsType {
     options?: object;
     disableDefaultStyles?: boolean;
   }
 
-  const TrackAndTrace: React.FC<PluginOptionsType>;
+  const TrackAndTrace: React.FC<PropsType>;
 
   export default TrackAndTrace;
 }
