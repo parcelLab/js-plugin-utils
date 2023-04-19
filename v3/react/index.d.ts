@@ -2,7 +2,7 @@ declare module "@parcellab/js-plugin-utils/v3/react" {
   import type React from "react";
 
   interface PropsType {
-    options?: object;
+    options?: Record<string, unknown | never>;
     disableDefaultStyles?: boolean;
   }
 

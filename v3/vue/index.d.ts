@@ -2,7 +2,7 @@ declare module "@parcellab/js-plugin-utils/v3/vue" {
   import { defineComponent } from "vue";
 
   interface PropsType {
-    options?: object;
+    options?: Record<string, unknown | never>;
     disableDefaultStyles?: boolean;
   }
 
