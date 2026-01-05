@@ -1,6 +1,6 @@
 {
   "name": "@parcellab/js-plugin-utils",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Utils for using the parcelLab js plugin with different frameworks (react/vue)",
   "private": false,
   "files": [
@@ -18,8 +18,8 @@
   "author": "@andruschka",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^16.0.2 || ^17 || ^18",
-    "react-dom": "^16.0.2 || ^17 || ^18",
+    "react": "^16.0.2 || ^17 || ^18 || ^19",
+    "react-dom": "^16.0.2 || ^17 || ^18 || ^19",
     "vue": "^3"
   },
   "devDependencies": {
