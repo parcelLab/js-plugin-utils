@@ -30,6 +30,8 @@
   "overrides": {
     "webpack-dev-server": ">=5.2.1",
     "postcss": ">=8.4.31",
+    "lodash": "^4.18.1",
+    "follow-redirects": "^1.16.0",
     "vue-template-compiler": "npm:vue-template-compiler-patched@^2.7.16-patch.2",
     "serialize-javascript": ">=7.0.3",
     "svgo": ">=2.8.1",
