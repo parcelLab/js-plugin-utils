@@ -7,7 +7,10 @@ on:
   workflow_dispatch:
 
 env:
-  NODE_VERSION: 18
+  # Node 22, not the 18 used by deploy.yaml: vitest 4 needs `styleText` from
+  # node:util (Node 20+). This only affects how tests and the build are run --
+  # the published artifacts target browsers, not a Node runtime.
+  NODE_VERSION: 22
 
 jobs:
   test:
