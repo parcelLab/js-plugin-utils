@@ -129,6 +129,33 @@ export default function MyPageComponent() {
 window.disableDefaultStyles = true;
 ```
 
+# Development
+
+```bash
+npm install
+npm test        # vitest + jsdom
+npm run build   # regenerate the published artifacts
+```
+
+## ⚠️ The published code is a committed build artifact
+
+`src/` is **not** what npm ships. The files under `v3/` and `v5/` are checked-in
+build output, produced from `src/` by `npm run build` (buble for React, vue-cli
+for Vue). Editing `src/` alone changes nothing for customers.
+
+Any change therefore needs three steps:
+
+1. edit the file in `src/`
+2. run `npm run build`
+3. commit `src/` **and** the regenerated `v3/` / `v5/` files together
+
+CI enforces this: the test workflow rebuilds and fails if the committed
+artifacts differ from what `src/` produces.
+
+Note that merging to `main` only redeploys the web component to the CDN. The
+React and Vue entry points are published to GitHub Packages by hand
+(`npm publish`), so a merged fix is not a released fix.
+
 # Breaking Changes
 
 With the release of the major version 1.0.0, the import paths have changed. It is now required that the plugin's version is specified within the path. Ex:
