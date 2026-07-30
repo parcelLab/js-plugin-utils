@@ -37,9 +37,9 @@
     "vue-template-compiler": "npm:vue-template-compiler-patched@^2.7.16-patch.2"
   },
   "overrides": {
-    "webpack-dev-server": ">=5.2.5",
+    "webpack-dev-server": ">=5.2.6",
     "http-proxy-middleware": "^2.0.10",
-    "postcss": ">=8.4.31",
+    "postcss": ">=8.5.18",
     "lodash": "^4.18.1",
     "follow-redirects": "^1.16.0",
     "vue-template-compiler": "npm:vue-template-compiler-patched@^2.7.16-patch.2",
