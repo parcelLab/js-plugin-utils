@@ -1,0 +1,44 @@
+name: Test
+
+on:
+  pull_request:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+env:
+  # Node 22, not the 18 used by deploy.yaml: vitest 4 needs `styleText` from
+  # node:util (Node 20+). This only affects how tests and the build are run --
+  # the published artifacts target browsers, not a Node runtime.
+  NODE_VERSION: 22
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current git repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
+
+      # The files under v3/ and v5/ are committed build artifacts, and the
+      # build is run by hand. Rebuild here and fail if the result differs from
+      # what was committed, so a fix to src/ can never be published without its
+      # corresponding artifact.
+      - name: Verify committed artifacts match src/
+        run: |
+          npm run build
+          if ! git diff --exit-code -- v3/ v5/; then
+            echo "::error::Committed build artifacts are stale. Run 'npm run build' and commit the result."
+            exit 1
+          fi

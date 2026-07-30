@@ -8,6 +8,9 @@
     "v5/"
   ],
   "scripts": {
+    "test": "vitest run --config vitest.config.mjs",
+    "test:watch": "vitest --config vitest.config.mjs",
+    "build": "npm run unsafe-build-react && npm run unsafe-build-react:v5 && npm run unsafe-build-vue && npm run unsafe-build-vue:v5",
     "unsafe-build-react": "buble src/v3/react/index.jsx > v3/react/index.js --no moduleExport,moduleImport",
     "unsafe-build-react:v5": "buble src/v5/react/index.jsx > v5/react/index.js --no moduleExport,moduleImport",
     "unsafe-build-vue": "npx vue-cli-service build --target lib src/v3/vue/index.vue && npm run prepare:vue-v3",
@@ -23,9 +26,15 @@
     "vue": "^3"
   },
   "devDependencies": {
+    "@testing-library/react": "^16.3.2",
+    "@vitejs/plugin-react": "^6.0.4",
+    "@vitejs/plugin-vue": "^6.0.8",
     "@vue/cli-service": "^5.0.1",
-    "vue-template-compiler": "npm:vue-template-compiler-patched@^2.7.16-patch.2",
-    "buble": "^0.20.0"
+    "@vue/test-utils": "^2.4.11",
+    "buble": "^0.20.0",
+    "jsdom": "^30.0.0",
+    "vitest": "^4.1.10",
+    "vue-template-compiler": "npm:vue-template-compiler-patched@^2.7.16-patch.2"
   },
   "overrides": {
     "webpack-dev-server": ">=5.2.6",

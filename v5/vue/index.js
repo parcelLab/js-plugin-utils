@@ -1,104 +1,25 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js ***!
-  \***********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ 262
+(__unused_webpack_module, exports) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _setPublicPath__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./setPublicPath */ \"./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js\");\n/* harmony import */ var _entry__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ~entry */ \"./src/v5/vue/index.vue\");\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_entry__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n\n\n\n//# sourceURL=webpack://@parcellab/js-plugin-utils/./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js?");
+var __webpack_unused_export__;
 
-/***/ }),
+__webpack_unused_export__ = ({ value: true });
+// runtime helper for setting properties on components
+// in a tree-shakable way
+exports.A = (sfc, props) => {
+    const target = sfc.__vccOpts || sfc;
+    for (const [key, val] of props) {
+        target[key] = val;
+    }
+    return target;
+};
 
-/***/ "./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js ***!
-  \***************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* eslint-disable no-var */\n// This file is imported into lib/wc client bundles.\n\nif (typeof window !== 'undefined') {\n  var currentScript = window.document.currentScript\n  if (false) { var getCurrentScript; }\n\n  var src = currentScript && currentScript.src.match(/(.+\\/)[^/]+\\.js(\\?.*)?$/)\n  if (src) {\n    __webpack_require__.p = src[1] // eslint-disable-line\n  }\n}\n\n// Indicate to webpack that this file can be concatenated\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (null);\n\n\n//# sourceURL=webpack://@parcellab/js-plugin-utils/./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js?");
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/dist/exportHelper.js":
-/*!******************************************************!*\
-  !*** ./node_modules/vue-loader/dist/exportHelper.js ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\n// runtime helper for setting properties on components\n// in a tree-shakable way\nexports[\"default\"] = (sfc, props) => {\n    const target = sfc.__vccOpts || sfc;\n    for (const [key, val] of props) {\n        target[key] = val;\n    }\n    return target;\n};\n\n\n//# sourceURL=webpack://@parcellab/js-plugin-utils/./node_modules/vue-loader/dist/exportHelper.js?");
-
-/***/ }),
-
-/***/ "./src/v5/vue/index.vue":
-/*!******************************!*\
-  !*** ./src/v5/vue/index.vue ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _index_vue_vue_type_template_id_18d3715c__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=18d3715c */ \"./src/v5/vue/index.vue?vue&type=template&id=18d3715c\");\n/* harmony import */ var _index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue?vue&type=script&lang=js */ \"./src/v5/vue/index.vue?vue&type=script&lang=js\");\n/* harmony import */ var _Users_lacazeto_Development_Repos_js_plugin_utils_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ \"./node_modules/vue-loader/dist/exportHelper.js\");\n\n\n\n\n;\nconst __exports__ = /*#__PURE__*/(0,_Users_lacazeto_Development_Repos_js_plugin_utils_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(_index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"], [['render',_index_vue_vue_type_template_id_18d3715c__WEBPACK_IMPORTED_MODULE_0__.render],['__file',\"src/v5/vue/index.vue\"]])\n/* hot reload */\nif (false) {}\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);\n\n//# sourceURL=webpack://@parcellab/js-plugin-utils/./src/v5/vue/index.vue?");
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/v5/vue/index.vue?vue&type=script&lang=js":
-/*!*****************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/v5/vue/index.vue?vue&type=script&lang=js ***!
-  \*****************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\nfunction loadScript(src, container = document.head) {\n  return new Promise((resolve, reject) => {\n    const scriptEl = document.createElement(\"script\");\n    scriptEl.src = src;\n    let timeout = 0;\n    let err;\n    function onScriptError(e) {\n      window.removeEventListener(\"error\", onScriptError);\n      err = e;\n    }\n    function cleanup() {\n      scriptEl.onerror = null;\n      scriptEl.onload = null;\n      clearTimeout(timeout);\n      window.removeEventListener(\"error\", onScriptError);\n    }\n    function onLoadComplete() {\n      cleanup();\n      if (err) {\n        reject(err);\n      }\n      if (!window.parcelLabTrackAndTrace) {\n        reject(new Error(\"window.parcelLabTrackAndTrace is undefined\"));\n      }\n      resolve(null);\n    }\n    function onLoadError(e) {\n      cleanup();\n      const errorType = e && (e.type === \"load\" ? \"js-missing\" : e.type);\n      const error = new Error(`Loading script error - ${errorType} for ${src}`);\n      reject(error);\n    }\n    scriptEl.onload = onLoadComplete;\n    scriptEl.onerror = onLoadError;\n    window.addEventListener(\"error\", onScriptError);\n    container.appendChild(scriptEl);\n    timeout = setTimeout(() => {\n      onScriptError({ type: \"timeout\" });\n    }, 15000);\n  });\n}\n\nfunction loadCssFile(cssFileUrl, container = document.head) {\n  const styleSheet = document.createElement(\"link\");\n  styleSheet.rel = \"stylesheet\";\n  styleSheet.type = \"text/css\";\n  styleSheet.href = cssFileUrl;\n  container.insertBefore(styleSheet, container.firstChild);\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n  name: \"ParcelLab\",\n  props: [\"options\", \"disableDefaultStyles\"],\n  async created() {\n    const _v = this;\n    if (typeof document === \"object\" && window) {\n      if (!_v.disableDefaultStyles) loadCssFile(\"https://cdn.parcellab.com/css/v5/main.min.css\");\n      loadScript(\"https://cdn.parcellab.com/js/v5/main.min.js\").then(\n        function () {\n          window.parcelLabTrackAndTrace.initialize(_v.options || {});\n        },\n        function (err) {\n          console.log(\"Could not load parcelLab script dynamically...\");\n          console.log(err);\n        }\n      );\n    }\n  },\n});\n\n\n//# sourceURL=webpack://@parcellab/js-plugin-utils/./src/v5/vue/index.vue?./node_modules/vue-loader/dist/index.js??ruleSet%5B0%5D.use%5B0%5D");
-
-/***/ }),
-
-/***/ "./src/v5/vue/index.vue?vue&type=script&lang=js":
-/*!******************************************************!*\
-  !*** ./src/v5/vue/index.vue?vue&type=script&lang=js ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* reexport safe */ _node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])\n/* harmony export */ });\n/* harmony import */ var _node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./index.vue?vue&type=script&lang=js */ \"./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/v5/vue/index.vue?vue&type=script&lang=js\");\n \n\n//# sourceURL=webpack://@parcellab/js-plugin-utils/./src/v5/vue/index.vue?");
-
-/***/ }),
-
-/***/ "./src/v5/vue/index.vue?vue&type=template&id=18d3715c":
-/*!************************************************************!*\
-  !*** ./src/v5/vue/index.vue?vue&type=template&id=18d3715c ***!
-  \************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* reexport safe */ _node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_index_vue_vue_type_template_id_18d3715c__WEBPACK_IMPORTED_MODULE_0__.render)\n/* harmony export */ });\n/* harmony import */ var _node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_index_vue_vue_type_template_id_18d3715c__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./index.vue?vue&type=template&id=18d3715c */ \"./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/v5/vue/index.vue?vue&type=template&id=18d3715c\");\n\n\n//# sourceURL=webpack://@parcellab/js-plugin-utils/./src/v5/vue/index.vue?");
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/v5/vue/index.vue?vue&type=template&id=18d3715c":
-/*!*********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/v5/vue/index.vue?vue&type=template&id=18d3715c ***!
-  \*********************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* binding */ render)\n/* harmony export */ });\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"vue\");\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);\n\n\nconst _hoisted_1 = { id: \"parcellab-track-and-trace\" }\n\nfunction render(_ctx, _cache, $props, $setup, $data, $options) {\n  return ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(\"div\", _hoisted_1))\n}\n\n//# sourceURL=webpack://@parcellab/js-plugin-utils/./src/v5/vue/index.vue?./node_modules/vue-loader/dist/templateLoader.js??ruleSet%5B1%5D.rules%5B2%5D!./node_modules/vue-loader/dist/index.js??ruleSet%5B0%5D.use%5B0%5D");
-
-/***/ }),
-
-/***/ "vue":
-/*!******************************************************************!*\
-  !*** external {"commonjs":"vue","commonjs2":"vue","root":"Vue"} ***!
-  \******************************************************************/
-/***/ ((module) => {
-
-module.exports = require("vue");
-
-/***/ })
+/***/ }
 
 /******/ 	});
 /************************************************************************/
@@ -127,18 +48,6 @@ module.exports = require("vue");
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -156,29 +65,160 @@ module.exports = require("vue");
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
 /******/ 		__webpack_require__.p = "";
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js");
-/******/ 	module.exports = __webpack_exports__["default"];
-/******/ 	
+var __webpack_exports__ = {};
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ entry_lib)
+});
+
+;// ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
+/* eslint-disable no-var */
+// This file is imported into lib/wc client bundles.
+
+if (typeof window !== 'undefined') {
+  var currentScript = window.document.currentScript
+  if (false) // removed by dead control flow
+{ var getCurrentScript; }
+
+  var src = currentScript && currentScript.src.match(/(.+\/)[^/]+\.js(\?.*)?$/)
+  if (src) {
+    __webpack_require__.p = src[1] // eslint-disable-line
+  }
+}
+
+// Indicate to webpack that this file can be concatenated
+/* harmony default export */ const setPublicPath = (null);
+
+;// external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
+const external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject = require("vue");
+;// ./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/v5/vue/index.vue?vue&type=template&id=532fed10
+
+
+const _hoisted_1 = { id: "parcellab-track-and-trace" }
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("div", _hoisted_1))
+}
+;// ./src/v5/vue/index.vue?vue&type=template&id=532fed10
+
+;// ./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/v5/vue/index.vue?vue&type=script&lang=js
+
+const LOAD_TIMEOUT_MS = 15000;
+const GLOBAL_NAME = "parcelLabTrackAndTrace";
+const JS_URL = "https://cdn.parcellab.com/js/v5/main.min.js";
+const CSS_URL = "https://cdn.parcellab.com/css/v5/main.min.css";
+
+/**
+ * Loads the parcelLab plugin bundle and resolves once it is ready to use.
+ *
+ * `globalName` is the property the bundle publishes on `window` as its very
+ * last statement. A script that throws while executing still fires `load`, so
+ * the absence of that global is a precise signal that *our* script failed --
+ * without reacting to anything else happening on the host page.
+ *
+ * Deliberately does NOT register a `window.addEventListener("error", ...)`
+ * listener. That fired for every uncaught error anywhere on the page, so an
+ * unrelated third-party script throwing while our bundle was downloading was
+ * treated as a parcelLab load failure and initialisation was skipped
+ * entirely (REQ-6294).
+ */
+function loadScript(src, globalName, container = document.head) {
+  return new Promise((resolve, reject) => {
+    const scriptEl = document.createElement("script");
+    scriptEl.src = src;
+    let timeout = 0;
+
+    function cleanup() {
+      scriptEl.onerror = null;
+      scriptEl.onload = null;
+      clearTimeout(timeout);
+    }
+
+    function onLoadComplete() {
+      cleanup();
+      if (!window[globalName]) {
+        reject(new Error(`Loaded ${src} but window.${globalName} is undefined`));
+        return;
+      }
+      resolve(null);
+    }
+
+    function onLoadError() {
+      cleanup();
+      reject(new Error(`Loading script error for ${src}`));
+    }
+
+    scriptEl.onload = onLoadComplete;
+    scriptEl.onerror = onLoadError;
+    container.appendChild(scriptEl);
+
+    timeout = setTimeout(() => {
+      cleanup();
+      // The bundle may have executed even if `load` has not been dispatched.
+      if (window[globalName]) {
+        resolve(null);
+        return;
+      }
+      reject(new Error(`Loading script timed out after ${LOAD_TIMEOUT_MS}ms for ${src}`));
+    }, LOAD_TIMEOUT_MS);
+  });
+}
+
+function loadCssFile(cssFileUrl, container = document.head) {
+  const styleSheet = document.createElement("link");
+  styleSheet.rel = "stylesheet";
+  styleSheet.type = "text/css";
+  styleSheet.href = cssFileUrl;
+  container.insertBefore(styleSheet, container.firstChild);
+}
+
+/* harmony default export */ const vuevue_type_script_lang_js = ({
+  name: "ParcelLab",
+  props: ["options", "disableDefaultStyles"],
+  async created() {
+    const _v = this;
+    if (typeof document === "object" && window) {
+      if (!_v.disableDefaultStyles) loadCssFile(CSS_URL);
+      loadScript(JS_URL, GLOBAL_NAME).then(
+        function () {
+          window[GLOBAL_NAME].initialize(_v.options || {});
+        },
+        function (err) {
+          console.error("Could not load parcelLab script dynamically...");
+          console.error(err);
+        }
+      );
+    }
+  },
+});
+
+;// ./src/v5/vue/index.vue?vue&type=script&lang=js
+ 
+// EXTERNAL MODULE: ./node_modules/vue-loader/dist/exportHelper.js
+var exportHelper = __webpack_require__(262);
+;// ./src/v5/vue/index.vue
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(vuevue_type_script_lang_js, [['render',render]])
+
+/* harmony default export */ const vue = (__exports__);
+;// ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
+
+
+/* harmony default export */ const entry_lib = (vue);
+
+
+module.exports = __webpack_exports__["default"];
 /******/ })()
 ;
+//# sourceMappingURL=js-plugin-utils.common.js.map
