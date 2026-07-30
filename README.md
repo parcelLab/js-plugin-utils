@@ -152,9 +152,23 @@ Any change therefore needs three steps:
 CI enforces this: the test workflow rebuilds and fails if the committed
 artifacts differ from what `src/` produces.
 
-Note that merging to `main` only redeploys the web component to the CDN. The
-React and Vue entry points are published to GitHub Packages by hand
-(`npm publish`), so a merged fix is not a released fix.
+## Releasing
+
+Merging to `main` only redeploys the web component to the CDN. The React and Vue
+entry points reach customers through
+[npm](https://www.npmjs.com/package/@parcellab/js-plugin-utils), published by
+hand — **so a merged fix is not a released fix.**
+
+```bash
+npm ci && npm test && npm run build
+# bump "version" in package.json — npm rejects republishing an existing version
+npm pack --dry-run        # confirm only v3/ and v5/ are included
+npm login                 # credentials in LastPass
+npm publish --access public
+npm view @parcellab/js-plugin-utils version
+```
+
+Publishing needs write access to the `@parcellab` scope on npm.
 
 # Breaking Changes
 
