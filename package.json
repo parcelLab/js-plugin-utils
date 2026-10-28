@@ -33,7 +33,7 @@
     "@vue/test-utils": "^2.4.11",
     "buble": "^0.20.0",
     "jsdom": "^30.0.0",
-    "vitest": "^4.1.10",
+    "vitest": "^4.1.12",
     "vue-template-compiler": "npm:vue-template-compiler-patched@^2.7.16-patch.2"
   },
   "overrides": {
