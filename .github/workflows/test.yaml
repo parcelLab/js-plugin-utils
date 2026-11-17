@@ -7,9 +7,8 @@ on:
   workflow_dispatch:
 
 env:
-  # Node 22, not the 18 used by deploy.yaml: vitest 4 needs `styleText` from
-  # node:util (Node 20+). This only affects how tests and the build are run --
-  # the published artifacts target browsers, not a Node runtime.
+  # vitest 4 needs `styleText` from node:util (Node 20+). This only affects how
+  # tests and the build are run -- the published artifacts target browsers.
   NODE_VERSION: 22
 
 jobs:
@@ -23,6 +22,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
+          # Without this, setup-node uses the runner image's cached Node, which
+          # can lag a security patch by days.
+          check-latest: true
           cache: "npm"
 
       - name: Install dependencies
